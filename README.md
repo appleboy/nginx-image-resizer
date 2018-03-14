@@ -1,2 +1,3 @@
 # nginx-image-resizer
-Real time image resizing and caching
+
+Docker Container of real time image resizing and caching
