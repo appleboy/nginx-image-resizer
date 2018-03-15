@@ -18,3 +18,12 @@ $ docker run -e NGINX_PORT=8081 \
   -e IMAGE_HOST2="http://localhost:9000" \
   appleboy/nginx-image-resizer
 ```
+
+## Paramemter
+
+| Parameter   | required | default value |
+|-------------|--------|----|
+| NGINX_HOST  | true   |    |
+| IMAGE_HOST  | true   |    |
+| JPG_QUALITY | false  | 95 |
+| EXPIRE_TIME | false  | 7d |
