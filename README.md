@@ -27,3 +27,25 @@ $ docker run -e NGINX_PORT=8081 \
 | IMAGE_HOST  | true   |    |
 | JPG_QUALITY | false  | 95 |
 | EXPIRE_TIME | false  | 7d |
+
+## example
+
+Start [minio](https://minio.io/) and nginx-image-resizer using docker-compose.yml
+
+```sh
+$ docker-compose up
+```
+
+Default access key and secret key as following. create new bucket and uploade test image.
+
+```
+MINIO_ACCESS_KEY: AKIAIOSFODNN7EXAMPLB
+MINIO_SECRET_KEY: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEC
+```
+
+open browser as following
+
+```
+# format: http://localhost:8002/resize_image_width/bucket_name/image_name
+http://localhost:8002/300/test/test.png
+```
