@@ -1,2 +1,2 @@
 build:
-	docker build -t appleboy/nginx-resizer .
+	docker build -t appleboy/nginx-image-resizer .
