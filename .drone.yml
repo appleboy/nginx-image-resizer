@@ -1,0 +1,16 @@
+
+clone:
+  git:
+    image: plugins/git
+    depth: 50
+    tags: true
+
+pipeline:
+  docker:
+    image: plugins/docker
+    secrets: [ docker_username, docker_password ]
+    default_tags: true
+    repo: ${DRONE_REPO}
+    when:
+      event: [ push, tag ]
+      local: false
