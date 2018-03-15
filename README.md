@@ -39,8 +39,8 @@ $ docker-compose up
 Default access key and secret key as following. create new bucket and uploade test image.
 
 ```
-MINIO_ACCESS_KEY: AKIAIOSFODNN7EXAMPLB
-MINIO_SECRET_KEY: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEC
+MINIO_ACCESS_KEY: YOUR_MINIO_ACCESS_KEY
+MINIO_SECRET_KEY: YOUR_MINIO_SECRET_KEY
 ```
 
 open browser as following

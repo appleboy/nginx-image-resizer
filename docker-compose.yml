@@ -6,9 +6,11 @@ services:
     container_name: minio
     ports:
       - "9000:9000"
+    volumes:
+      - minio-data:/data
     environment:
-      MINIO_ACCESS_KEY: AKIAIOSFODNN7EXAMPLB
-      MINIO_SECRET_KEY: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEC
+      MINIO_ACCESS_KEY: YOUR_MINIO_ACCESS_KEY
+      MINIO_SECRET_KEY: YOUR_MINIO_SECRET_KEY
     command: server /data
 
   image-resizer:
@@ -19,3 +21,6 @@ services:
     environment:
       IMAGE_HOST: http://minio:9000
       NGINX_HOST: localhost
+
+volumes:
+  minio-data:
