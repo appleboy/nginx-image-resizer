@@ -1,5 +1,7 @@
 # nginx-image-resizer
 
+<img src="./images/26946324088_5b3f0b1464_o.png">
+
 Docker Container of real time image resizing and caching
 
 ## Build Image
