@@ -15,7 +15,7 @@ $ docker build -t appleboy/nginx-image-resizer .
 ```
 $ docker run -e NGINX_PORT=8081 \
   -e NGINX_HOST=localhost \
-  -e IMAGE_HOST2="http://localhost:9000" \
+  -e IMAGE_HOST="http://localhost:9000" \
   appleboy/nginx-image-resizer
 ```
 
