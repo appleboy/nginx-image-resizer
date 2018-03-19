@@ -46,8 +46,10 @@ MINIO_SECRET_KEY: YOUR_MINIO_SECRET_KEY
 open browser as following
 
 ```
-# format: http://localhost:8002/resize_image_width/bucket_name/image_name
+# format 1: http://localhost:8002/resize_image_width/bucket_name/image_name
 http://localhost:8002/300/test/test.png
+# format 2: http://localhost:8002/${image_width}x${image_height}/bucket_name/image_name
+http://localhost:8002/300x200/test/test.png
 ```
 
 
