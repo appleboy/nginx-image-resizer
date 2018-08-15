@@ -34,7 +34,7 @@ $ docker run --restart always \
 Start [minio](https://minio.io/) and nginx-image-resizer using docker-compose.yml
 
 ```sh
-$ docker-compose up
+$ docker-compose up -d
 ```
 
 Default access key and secret key as following. create new bucket and uploade test image.
@@ -42,6 +42,13 @@ Default access key and secret key as following. create new bucket and uploade te
 ```
 MINIO_ACCESS_KEY: YOUR_MINIO_ACCESS_KEY
 MINIO_SECRET_KEY: YOUR_MINIO_SECRET_KEY
+```
+
+set bucket as public permission.
+
+```sh
+$ mc config host add minio http://localhost:9000 MINIO_ACCESS_KEY MINIO_SECRET_KEY
+$ mc policy --recursive public minio/test
 ```
 
 open browser as following
