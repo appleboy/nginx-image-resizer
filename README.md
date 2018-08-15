@@ -60,7 +60,6 @@ http://localhost:8002/300/test/test.png
 http://localhost:8002/300x200/test/test.png
 ```
 
-
 ## Benchmark
 
 without nginx proxy cache:
