@@ -29,6 +29,7 @@ $ docker run --restart always \
 | JPG_QUALITY | false  | 95 |
 | EXPIRE_TIME | false  | 7d |
 | MEMORY_SIZE | false  | 20m |
+| CACHE_NAME | false  | cache_zone |
 
 ## example
 
