@@ -30,6 +30,7 @@ $ docker run --restart always \
 | EXPIRE_TIME | false  | 7d |
 | MEMORY_SIZE | false  | 20m |
 | CACHE_NAME | false  | cache_zone |
+| CACHE_SIZE | false  | 40m |
 
 ## example
 
