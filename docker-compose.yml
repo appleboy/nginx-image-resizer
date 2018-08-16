@@ -5,7 +5,7 @@ services:
     image: minio/minio
     container_name: minio
     ports:
-      - "9000:9000"
+      - 9000:9000
     volumes:
       - minio-data:/data
     environment:
@@ -17,7 +17,7 @@ services:
     image: appleboy/nginx-image-resizer
     container_name: image-resizer
     ports:
-      - "8002:80"
+      - 8002:80
     volumes:
       - cache-data:/data
     environment:
