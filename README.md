@@ -28,6 +28,7 @@ $ docker run --restart always \
 | IMAGE_HOST  | true   |    |
 | JPG_QUALITY | false  | 95 |
 | EXPIRE_TIME | false  | 7d |
+| CACHE_SIZE | false  | 2048m (2G) |
 
 ## example
 
