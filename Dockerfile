@@ -1,4 +1,4 @@
-FROM nginx:1.13-alpine
+FROM nginx:1.15-alpine
 
 LABEL maintainer="Bo-Yi Wu <appleboy.tw@gmail.com>"
 
