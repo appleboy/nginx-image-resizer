@@ -18,9 +18,12 @@ services:
     container_name: image-resizer
     ports:
       - "8002:80"
+    volumes:
+      - cache-data:/data
     environment:
       IMAGE_HOST: http://minio:9000
       NGINX_HOST: localhost
 
 volumes:
   minio-data:
+  cache-data:
