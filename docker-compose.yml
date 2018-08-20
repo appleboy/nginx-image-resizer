@@ -8,6 +8,11 @@ services:
       - 9000:9000
     volumes:
       - minio-data:/data
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1k"
+        max-file: "3"
     environment:
       MINIO_ACCESS_KEY: YOUR_MINIO_ACCESS_KEY
       MINIO_SECRET_KEY: YOUR_MINIO_SECRET_KEY
@@ -20,6 +25,11 @@ services:
       - 8002:80
     volumes:
       - cache-data:/data
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1k"
+        max-file: "3"
     environment:
       IMAGE_HOST: http://minio:9000
       NGINX_HOST: localhost
