@@ -1,16 +1,46 @@
+---
+kind: pipeline
+name: linux-amd64
 
-clone:
-  git:
-    image: plugins/git
-    depth: 50
-    tags: true
+platform:
+  os: linux
+  arch: amd64
 
-pipeline:
-  docker:
-    image: plugins/docker
-    secrets: [ docker_username, docker_password ]
-    default_tags: true
-    repo: ${DRONE_REPO}
-    when:
-      event: [ push, tag ]
-      local: false
+steps:
+- name: dryrun
+  pull: always
+  image: plugins/docker:linux-amd64
+  settings:
+    cache_from: appleboy/nginx-image-resizer
+    dockerfile: Dockerfile
+    dry_run: true
+    repo: appleboy/nginx-image-resizer
+    tags: linux-amd64
+  when:
+    event:
+    - pull_request
+
+- name: publish
+  pull: always
+  image: plugins/docker:linux-amd64
+  settings:
+    auto_tag: true
+    auto_tag_suffix: linux-amd64
+    cache_from: appleboy/nginx-image-resizer
+    dockerfile: Dockerfile
+    daemon_off: false
+    password:
+      from_secret: docker_password
+    repo: appleboy/nginx-image-resizer
+    username:
+      from_secret: docker_username
+  when:
+    event:
+      exclude:
+      - pull_request
+
+trigger:
+  ref:
+  - refs/heads/master
+  - refs/pull/**
+  - refs/tags/**
