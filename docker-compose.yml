@@ -41,3 +41,5 @@ services:
 volumes:
   minio-data:
   cache-data:
+
+
