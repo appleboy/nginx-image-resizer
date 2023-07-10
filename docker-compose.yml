@@ -14,15 +14,17 @@ services:
       driver: "json-file"
       options:
         max-size: "1k"
-        max-file: "3"
+        max-file: "10"
     environment:
       MINIO_ACCESS_KEY: minio
       MINIO_SECRET_KEY: miniominio
     command: server --console-address ":9001" /data
 
   image-resizer:
-    image: appleboy/nginx-image-resizer
-    container_name: image-resizer
+    build:
+      context: .
+      dockerfile: Dockerfile
+
     ports:
       - 8002:80
     volumes:
