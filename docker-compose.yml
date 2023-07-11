@@ -16,8 +16,8 @@ services:
         max-size: "1k"
         max-file: "10"
     environment:
-      MINIO_ACCESS_KEY: minio
-      MINIO_SECRET_KEY: miniominio
+      MINIO_ACCESS_KEY: YOUR_MINIO_ACCESS_KEY
+      MINIO_SECRET_KEY: YOUR_MINIO_SECRET_KEY
     command: server --console-address ":9001" /data
 
   image-resizer:
