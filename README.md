@@ -2,6 +2,8 @@
 
 ![./images/26946324088_5b3f0b1464_o.png](./images/26946324088_5b3f0b1464_o.png)
 
+[![Docker Image](https://github.com/appleboy/nginx-image-resizer/actions/workflows/docker.yml/badge.svg?branch=master)](https://github.com/appleboy/nginx-image-resizer/actions/workflows/docker.yml)
+
 Docker Container of real time image resizing and caching
 
 ## Build Image
