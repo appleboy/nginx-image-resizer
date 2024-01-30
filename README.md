@@ -35,7 +35,7 @@ docker run --restart always \
 
 ## example
 
-Start [minio](https://minio.io/) and nginx-image-resizer using docker-compose.yml
+Start [minio](https://min.io/) and nginx-image-resizer using docker-compose.yml
 
 ```sh
 docker-compose up -d
