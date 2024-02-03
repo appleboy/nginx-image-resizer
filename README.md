@@ -4,12 +4,12 @@
 
 [![Docker Image](https://github.com/appleboy/nginx-image-resizer/actions/workflows/docker.yml/badge.svg?branch=master)](https://github.com/appleboy/nginx-image-resizer/actions/workflows/docker.yml)
 
-Docker Container of real time image resizing and caching
+Nginx Image Resizer is a Docker-based tool that uses Nginx and ImageMagick to dynamically resize images. When you run this Docker image, you can specify the size of the image through URL parameters, and Nginx Image Resizer will return the resized image. This tool is particularly useful for websites and applications that need to dynamically adjust image sizes.
 
 ## Build Image
 
 ```bash
-docker build -t appleboy/nginx-image-resizer .
+docker build -t ghcr.io/appleboy/nginx-image-resizer .
 ```
 
 ## RUN Image
@@ -19,7 +19,7 @@ docker run --restart always \
   -p 8002:80 \
   -e NGINX_HOST=localhost \
   -e IMAGE_HOST="http://localhost:9000" \
-  appleboy/nginx-image-resizer
+  ghcr.io/appleboy/nginx-image-resizer
 ```
 
 ## Paramemter
