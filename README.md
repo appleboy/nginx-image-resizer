@@ -43,11 +43,11 @@ Start [minio](https://min.io/) and nginx-image-resizer using docker-compose.yml
 docker-compose up -d
 ```
 
-Default access key and secret key as following. create new bucket and uploade test image.
+set minio environment as following
 
 ```sh
-MINIO_ACCESS_KEY: YOUR_MINIO_ACCESS_KEY
-MINIO_SECRET_KEY: YOUR_MINIO_SECRET_KEY
+MINIO_ROOT_USER: YOUR_MINIO_ROOT_USER
+MINIO_ROOT_PASSWORD: YOUR_MINIO_ROOT_PASSWORD
 ```
 
 set bucket as public permission.
